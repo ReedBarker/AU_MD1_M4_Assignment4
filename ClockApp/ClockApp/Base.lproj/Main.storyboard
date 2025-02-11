@@ -1,24 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="iPad13_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ClockApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1032" height="1376"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BackgroundNight" translatesAutoresizingMaskIntoConstraints="NO" id="eNM-oR-Z0K">
+                                <rect key="frame" x="0.0" y="0.0" width="1032" height="1376"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="label1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jr-fW-Ufg">
+                                <rect key="frame" x="0.0" y="153" width="1032" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.93999999999999995" green="0.88923999999999992" blue="0.43239999999999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZ6-MF-vFj">
+                                <rect key="frame" x="0.0" y="1275" width="1032" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.93999999999999995" green="0.88924000000000003" blue="0.43240000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5j-NB-t1W">
+                                <rect key="frame" x="152" y="257" width="728" height="360"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </datePicker>
+                            <view opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dnq-8y-Woj">
+                                <rect key="frame" x="0.0" y="1082" width="1032" height="52"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ErV-yH-aot">
+                                        <rect key="frame" x="202" y="2" width="596" height="50"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Start Timer">
+                                            <color key="baseForegroundColor" red="0.93999999999999995" green="0.88924000000000003" blue="0.43240000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="startStopButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fHw-jb-mry"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ErV-yH-aot" secondAttribute="bottom" constant="9" id="RgT-PK-j0x"/>
+                                    <constraint firstItem="ErV-yH-aot" firstAttribute="leading" secondItem="Dnq-8y-Woj" secondAttribute="leading" constant="99" id="SoJ-3Q-d6u"/>
+                                    <constraint firstAttribute="trailing" secondItem="ErV-yH-aot" secondAttribute="trailing" constant="98" id="v6u-L6-gOT"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RZ6-MF-vFj" secondAttribute="bottom" constant="60" id="KhO-Ux-hSQ"/>
+                            <constraint firstItem="Dnq-8y-Woj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YsM-04-twt"/>
+                            <constraint firstItem="RZ6-MF-vFj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="oVB-9z-lKv"/>
+                            <constraint firstItem="RZ6-MF-vFj" firstAttribute="top" secondItem="Dnq-8y-Woj" secondAttribute="bottom" constant="20" id="pGn-en-msX"/>
+                            <constraint firstItem="Dnq-8y-Woj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vSY-tU-icV"/>
+                            <constraint firstItem="RZ6-MF-vFj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yDf-F3-wZU"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImage" destination="eNM-oR-Z0K" id="mhr-oX-DPr"/>
+                        <outlet property="label1" destination="6jr-fW-Ufg" id="PfE-Xg-Hh0"/>
+                        <outlet property="label2" destination="RZ6-MF-vFj" id="b4W-kx-rlq"/>
+                        <outlet property="startStopButton" destination="ErV-yH-aot" id="IsA-oe-Hgz"/>
+                        <outlet property="timerPicker" destination="J5j-NB-t1W" id="LQv-ql-USo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="45.038167938931295" y="-2.8169014084507045"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BackgroundNight" width="640" height="268"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
